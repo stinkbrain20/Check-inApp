@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Check-in</title>
+    <title>Home</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,26 +17,27 @@
 </head>
 
 <body>
-
+    <!--Header-->
     <div class="navbar-fixed">
         <nav class="red">
             <div class="nav-wrapper">
                 <div class="container">
-                    <a href="#" class="brand-logo center">LOGO</a>
-                    <a href="#" data-target="mobile-nav" class="sidenav-trigger">
-                        <i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
+                    <a href="#" class="brand-logo center">AIRPINAS</a>
+                    <a href="#" data-target="mobile-nav" class="right sidenav-trigger">
+                        <i class="large material-icons">account_circle</i></a>
+                    <ul class="left hide-on-med-and-down">
                         <li><a href="#">Search Flight</a></li>
                         <li><a href="#">Check-in</a></li>
                         <li><a href="#">Passes</a></li>
                         <li><a href="#">My Bookings</a></li>
                     </ul>
-
                 </div>
             </div>
         </nav>
     </div>
-    <ul class="sidenav" id="mobile-nav">
+
+    <!--Side Menu-->
+    <ul class="sidenav yellow" id="mobile-nav">
         <li><a href="#">Search Flight</a></li>
         <li><a href="#">Check-in</a></li>
         <li><a href="#">Passes</a></li>
@@ -53,6 +54,26 @@
         });
     </script>
 
+    <!--Current Bookings-->
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/phil.jpg" class="responsive-img">
+                    <span class="class-title">Manila</span>
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, reiciendis minima.</p>
+
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
+
+<!--Icons-->
+<!-- search -> search flight
+playlist_add_check -> check-in
+speaker_notes -> passes
+local_activity -> my bookings -->
