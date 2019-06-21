@@ -1,0 +1,25 @@
+.philbg{
+  background-image: url("/Check-in/images/phil.jpg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 400px;
+}
+
+.footerCards{
+    padding: 10px;
+    height: 170px;
+    width: 170px;
+    position: relative;
+    max-width: 220px;
+    max-height: 220px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.slideLogo{
+  margin-right: 300px;
+}

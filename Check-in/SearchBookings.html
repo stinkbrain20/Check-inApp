@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Check-in</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Check-in.css" />
+
+</head>
+
+<body>
+    <!--NavBar-->
+    <div class="navbar-fixed">
+        <nav class=" red accent-4">
+            <div class="nav-wrapper">
+                <a href="Check-in.html" class="brand-logo center">AIRPINAS</a>
+                <a href="#" data-target="slideout-nav" class="right sidenav-trigger show-on-large">
+                    <i class="large material-icons">account_circle</i>
+                    <!-- <ul class="left hide-on-med-and-down">
+                        <li><a href="#">Search Flight</a></li>
+                        <li><a href="#">Check-in</a></li>
+                        <li><a href="#">Passes</a></li>
+                        <li><a href="#">My Bookings</a></li>
+                    </ul> -->
+
+            </div>
+        </nav>
+    </div>
+
+    <!--Side Menu-->
+    <ul class="sidenav yellow" id="slideout-nav">
+        <li><a href="#">Search Flight</a></li>
+        <li><a href="#">Check-in</a></li>
+        <li><a href="#">Passes</a></li>
+        <li><a href="#">My Bookings</a></li>
+    </ul>
+
+    <!--Scripts-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {
+            inDuration: 350,
+            outDuration: 350,
+            edge: 'right'
+        });
+    </script>
+
+</body>
+
+</html>
