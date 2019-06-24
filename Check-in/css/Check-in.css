@@ -20,6 +20,10 @@
   font-weight: bold;
 }
 
-.slideLogo{
-  margin-right: 300px;
+#placeholder{
+  padding: 30px;
+}
+
+#fontSize{
+  font-size: 25pt;
 }

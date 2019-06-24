@@ -37,12 +37,67 @@
     </div>
 
     <!--Side Menu-->
-    <ul class="sidenav yellow" id="slideout-nav">
+    <ul class="sidenav blue-grey lighten-4" id="slideout-nav">
         <li><a href="#">Search Flight</a></li>
         <li><a href="#">Check-in</a></li>
         <li><a href="#">Passes</a></li>
         <li><a href="#">My Bookings</a></li>
     </ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="red-text text-accent-4">
+                <h3>Check-in</h3>
+            </div>
+            <br><br>
+            <div class="container z-depth-3" id="placeholder">
+                <h4>Booking details:</h4>
+                <br>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input  value="Juan" id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input value="Dela Cruz" id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input value="Z060" id="bookingnum" type="text" class="validate">
+                        <label class="active" for="bookingnum">Booking Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <label>Departure City</label>
+                        <br><br>
+                        <select class="browser-default">
+                            <option value="" disabled selected></option>
+                            <option value="1">Cebu (CEB)</option>
+                            <option value="2">Davao (DVO)</option>
+                            <option value="3">Manila (MNL)</option>
+                            <option value="4">Puerto Princesa (PPS)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <a href="#">View my bookings</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <div class="row center">
+                <div class="col s12">
+                    <a id="btn_SearchDetails"
+                        class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
+                        <i id="fontSize" class="material-icons left">search</i>SEARCH</a>
+                </div>
+            </div>
+    </div>
 
     <!--Scripts-->
 
@@ -55,6 +110,17 @@
             outDuration: 350,
             edge: 'right'
         });
+    </script>
+
+    <script>
+        var elems = document.querySelectorAll('select');
+        M.Dropdown.init(elems, {});
+    </script>
+
+    <script type="text/javascript">
+        document.getElementById("btn_SearchDetails").onclick = function () {
+            location.href = "Passenger.html";
+        };
     </script>
 
 </body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Passenger</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Check-in.css" />
+
+</head>
+
+<body>
+
+    <!--NavBar-->
+    <div class="navbar-fixed">
+        <nav class=" red accent-4">
+            <div class="nav-wrapper">
+                <a href="Check-in.html" class="brand-logo center">AIRPINAS</a>
+                <a href="#" data-target="slideout-nav" class="right sidenav-trigger show-on-large">
+                    <i class="large material-icons">account_circle</i>
+                    <!-- <ul class="left hide-on-med-and-down">
+                            <li><a href="#">Search Flight</a></li>
+                            <li><a href="#">Check-in</a></li>
+                            <li><a href="#">Passes</a></li>
+                            <li><a href="#">My Bookings</a></li>
+                        </ul> -->
+
+            </div>
+        </nav>
+    </div>
+
+    <!--Side Menu-->
+    <ul class="sidenav blue-grey lighten-4" id="slideout-nav">
+        <li><a href="#">Search Flight</a></li>
+        <li><a href="SearchBookings.html">Check-in</a></li>
+        <li><a href="#">Passes</a></li>
+        <li><a href="#">My Bookings</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="red-text text-accent-4">
+                <h3>Passenger Details</h3>
+            </div>
+            <br><br>
+            <div class="container z-depth-3" id="placeholder">
+                <h4>Passenger 1:</h4>
+                <br>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="Juan Dela Cruz" id="disabled" type="text" class="validate">
+                        <label for="disabled">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="23F" id="disabled" type="text" class="validate">
+                        <label for="disabled">Seat Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="20 Kg" id="disabled" type="text" class="validate">
+                        <label for="disabled">Baggage Allowance</label>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="container z-depth-3" id="placeholder">
+                <h4>Passenger 2:</h4>
+                <br>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="Juana Dela Cruz" id="disabled" type="text" class="validate">
+                        <label for="disabled">Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="23E" id="disabled" type="text" class="validate">
+                        <label for="disabled">Seat Number</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="7 Kg" id="disabled" type="text" class="validate">
+                        <label for="disabled">Baggage Allowance</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row center">
+        <div class="col s12">
+            <a id="btn_Check" class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
+                <i id="fontSize" class="material-icons left">playlist_add_check</i>CHECK-IN</a>
+        </div>
+    </div>
+
+
+
+
+    <!--Scripts-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {
+            inDuration: 350,
+            outDuration: 350,
+            edge: 'right'
+        });
+    </script>
+
+<script type="text/javascript">
+    document.getElementById("btn_Check").onclick = function () {
+        location.href = "Passenger.html";
+    };
+</script>
+
+</body>
+
+</html>
