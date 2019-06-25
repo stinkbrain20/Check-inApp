@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, min-width=500" />
+
+    <title>Boarding Pass</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Check-in.css" />
+
+</head>
+
+<body>
+
+    <!--NavBar-->
+    <div class="navbar-fixed">
+        <nav class=" red accent-4">
+            <div class="row"  id="navLogo">
+                <a href="Check-in.html" class="center" ></a>
+                <a href="#" data-target="slideout-nav" class="right sidenav-trigger show-on-large">
+                    <i id="iconbtnSize" class="material-icons">account_circle</i></a>
+                <a href="#" onclick="goBack()" class="left">
+                    <i id="iconbtnSize" class="material-icons">navigate_before</i>
+                    <!-- <ul class="left hide-on-med-and-down">
+                            <li><a href="#">Search Flight</a></li>
+                            <li><a href="#">Check-in</a></li>
+                            <li><a href="#">Passes</a></li>
+                            <li><a href="#">My Bookings</a></li>
+                        </ul> -->
+            </div>
+
+        </nav>
+    </div>
+
+    <!--Side Menu-->
+    <ul class="sidenav blue-grey lighten-4" id="slideout-nav">
+        <li><a href="#">Search Flight</a></li>
+        <li><a href="SearchBookings.html">Check-in</a></li>
+        <li><a href="#">Passes</a></li>
+        <li><a href="#">My Bookings</a></li>
+    </ul>
+
+    <!--Passenger 1-->
+    <!-- <div class="container"> -->
+    <br><br>
+    <div class="row">
+        <div class="container z-depth-3" id="placeholder">
+            <div class="row red-text text-accent-4">
+                <h3>Boarding Pass </h3>
+                <img src="/Check-in/images/QR.png" class="QRsize right" />
+                <br>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="Manila (MNL)" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">From</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Puerto Princesa (PPS)" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">To</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="Juan Dela Cruz" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Name of Passenger</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Z060" id="disabled" type="text" class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Flight Number</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="Tuesday 1 October 2019" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Date</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="0855 H (8:55 AM)" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Boarding Time</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="NAIA Terminal 3" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Airport Terminal</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Gate 3" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Boarding Gate</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="23F" id="disabled" type="text" class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Seat Number</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Economy" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Class</label>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!--Passenger 2-->
+    <!-- <div class="container"> -->
+    <br>
+    <div class="row">
+        <div class="container z-depth-3" id="placeholder">
+            <div class="row red-text text-accent-4">
+                <h3>Boarding Pass </h3>
+                <img src="/Check-in/images/QR.png" class="QRsize right" />
+                <br>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="Manila (MNL)" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">From</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Puerto Princesa (PPS)" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">To</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="Juana Dela Cruz" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Name of Passenger</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Z060" id="disabled" type="text" class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Flight Number</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="Tuesday 1 October 2019" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Date</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="0855 H (8:55 AM)" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Boarding Time</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="NAIA Terminal 3" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Airport Terminal</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Gate 3" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Boarding Gate</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4 offset-s1">
+                    <input disabled value="23E" id="disabled" type="text" class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Seat Number</label>
+                </div>
+                <div class="input-field col s4 offset-s2">
+                    <input disabled value="Economy" id="disabled" type="text"
+                        class="bold blue-text text-darken-2 center">
+                    <label for="disabled">Class</label>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!--FAQ-->
+    <br>
+    <div class="container z-depth-3" id="placeholder"">
+        <div class=" row red-text text-accent-4">
+        <h3>Frequently Asked Questions</h3>
+    </div>
+    <ul class="collapsible expandable">
+        <li>
+            <div class="collapsible-header "><i class="material-icons">assignment_turned_in</i><span
+                    class="bold blue-text text-darken-2">Check-in Counter</span> </div>
+            <div class="collapsible-body"><span>Bag drop and check-in counters open as early as 3 hours before your
+                    flight. Check-in and boarding times vary abd deped on the airport of departure.
+                    <br> <br>Open: 2 hours before the scheduled time of departure <br> Close (other airports): 45
+                    minutes before the scheduled time of departure
+                </span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">contacts</i><span
+                    class="bold blue-text text-darken-2">Valid Photo ID</span></div>
+            <div class="collapsible-body"><span>For everyone's security, our airports team has to verify your valid
+                    photo ID matches with the name on your itinerary. For senior citizens and persons with disability,
+                    the OSCA ID and PWD ID must be presented upon check-in.
+                </span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">card_travel</i><span
+                    class="bold blue-text text-darken-2">Prepaid Luggage</span></div>
+            <div class="collapsible-body"><span>Bags for check-in must not exceed 32 kilos per piece, and not contain
+                    fragile or valuable items. You may carry one item inside the aircraft cabin, prrovided it weighs 7
+                    kilos or less.
+                </span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">invert_colors</i><span
+                    class="bold blue-text text-darken-2">Liquids</span></div>
+            <div class="collapsible-body"><span>Subject to the prevalent applicable local laws and regulations guest may
+                    take liquids on board in their cabin baggae with a maximum volume of 100ml. The items must be placed
+                    in a transparent, re-sealable plastic bag.
+                </span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">block</i><span
+                    class="bold blue-text text-darken-2">Prohibited Items</span></div>
+            <div class="collapsible-body"><span>
+                    <ul>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> items which are not porperly packed in
+                                suitcases or other suitable containers</p>
+                        </li>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> items which are likely to endanger the aircraft
+                                or persons or property onboard the aircraft</p>
+                        </li>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> items the carriage of which is prohibited by
+                                applicable laws, regulations or orders of any state or country to be flown from, into or
+                                over</p>
+                        </li>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> items which in the Airline's reasonable
+                                judgement are unstuitable for carriae by reason of their weight, shape, size or
+                                character</p>
+                        </li>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> fragile or perishable items unless the
+                                passenger voluntarily executes a Limited Release Tag relieving the Airline of any
+                                liability in
+                                case of damage to, loss or destruction of, such items;
+                                <ul>
+                                    <li><i class="tiny material-icons indentText">cancel</i> live or dead animals</li>
+                                    <li><i class="tiny material-icons indentText">cancel</i> human or animal remains
+                                    </li>
+                                    <li><i class="tiny material-icons indentText">cancel</i> improperly packed fresh or
+                                        frozen foodstuff
+                                    </li>
+                                    <li><i class="tiny material-icons indentText">cancel</i> firearms and ammunition
+                                    </li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> Dangerous goods, including but not limited to
+                                explosives, flammable or non-flammable gas (such as aerosol paints, butane gas, lighter
+                                refills) refrigerated gas (such as filled aqualung cylinders, liquid nitrogen),
+                                flammable liquids (such as paints, thinners, solvents), flammable solids (such as
+                                matches, fire lighters), organic peroxides (such as resins), poisons, infective
+                                substances (such as viruses, bacteria), radioactive material (such as radium), corrosive
+                                materials (such as acid, alkali, mercury, thermometers), magnetic substances, oxidizing
+                                materials (such as bleaches)</p>
+                        </li>
+                        <li>
+                            <p><i class="tiny material-icons">cancel</i> weapons of any kind such as antique firearms,
+                                swords, knives and similar items, which may only be allowed as Checked Baggage at
+                                Airline's discretion for justifiable reasons.</p>
+                        </li>
+                    </ul>
+                </span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">description</i><span
+                    class="bold blue-text text-darken-2">Travel Documents</span></div>
+            <div class="collapsible-body"><span>International travelers must posses valid passports and applicable
+                    visas. Airpinas is a point-to-point carrier so please ensure that you have all the necessary visas
+                    or documents required for entry to the destination indicated on on your itinerary.</span></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><i class="material-icons">flight_takeoff</i><span
+                    class="bold blue-text text-darken-2">Boading Time</span></div>
+            <div class="collapsible-body"><span>Guests are required to be at the boarding gate at least 20 minutes
+                    before the schedule time of departure or you will be denied boarding.</span></div>
+        </li>
+    </ul>
+    </div>
+
+    <!-- Modal Trigger -->
+    <br>
+    <div class="row center">
+        <div class="col s12">
+            <a id="textFont"
+                class="waves-effect waves-light btn-large modal-trigger amber accent-3 red-text text-accent-4 bold"
+                href="#modal1"><i id="iconbtnSize" class="material-icons left">local_printshop</i>Print Boarding
+                Pass</a>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+    </div>
+
+
+    <!--Scripts-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/Check-in/js/viewport-min-width.js"></script>
+
+    <script>
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav, {
+            inDuration: 350,
+            outDuration: 350,
+            edge: 'right'
+        });
+    </script>
+
+<!-- Back button -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    <script>
+        var elems = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems, {
+            accordion: false
+        });
+    </script>
+
+    <script>
+        var elems = document.querySelectorAll('.modal');
+        M.Modal.init(elems, {});
+    </script>
+
+</body>
+
+</html>

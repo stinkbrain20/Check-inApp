@@ -54,47 +54,56 @@
                 <h4>Booking details:</h4>
                 <br>
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input  value="Juan" id="first_name" type="text" class="validate">
+                    <div class="input-field col s4 offset-s1">
+                        <input  value="Juan" id="first_name" type="text" class="bold center upperCase">
                         <label for="first_name">First Name</label>
                     </div>
-                    <div class="input-field col s6">
-                        <input value="Dela Cruz" id="last_name" type="text" class="validate">
+                    <div class="input-field col s4 offset-s2">
+                        <input value="Dela Cruz" id="last_name" type="text" class="bold center upperCase">
                         <label for="last_name">Last Name</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input value="Z060" id="bookingnum" type="text" class="validate">
+                    <div class="input-field col s4 offset-s1">
+                        <input value="Z060" id="bookingnum" type="text" class="bold center upperCase">
                         <label class="active" for="bookingnum">Booking Number</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s4 offset-s1">
                         <label>Departure City</label>
                         <br><br>
-                        <select class="browser-default">
+                        <select class="browser-default bold upperCase center">
                             <option value="" disabled selected></option>
-                            <option value="1">Cebu (CEB)</option>
-                            <option value="2">Davao (DVO)</option>
-                            <option value="3">Manila (MNL)</option>
-                            <option value="4">Puerto Princesa (PPS)</option>
+                            <option value="1">CEBU (CEB)</option>
+                            <option value="2">DAVAO (DVO)</option>
+                            <option value="3">MANILA (MNL)</option>
+                            <option value="4">PUERTO PRINCESA (PPS)</option>
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s6">
-                        <a href="#">View my bookings</a>
+                        <a class="underLine" href="#">View my bookings</a>
                     </div>
                 </div>
             </div>            
         </div>
 
+        <!-- <div class="row center">
+                <div class="col s12">
+                    <a id="textFont" href="Passes.html"
+                        class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold "> <i
+                            id="iconbtnSize" class="large material-icons left">playlist_add_check</i>
+                        CHECK-IN</a>
+                </div>
+            </div> -->
+
         <div class="row center">
                 <div class="col s12">
-                    <a id="btn_SearchDetails"
+                    <a id="textFont" href="Passenger.html"
                         class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
-                        <i id="fontSize" class="material-icons left">search</i>SEARCH</a>
+                        <i id="iconbtnSize" class="material-icons left">search</i>SEARCH</a>
                 </div>
             </div>
     </div>
@@ -115,12 +124,6 @@
     <script>
         var elems = document.querySelectorAll('select');
         M.Dropdown.init(elems, {});
-    </script>
-
-    <script type="text/javascript">
-        document.getElementById("btn_SearchDetails").onclick = function () {
-            location.href = "Passenger.html";
-        };
     </script>
 
 </body>
