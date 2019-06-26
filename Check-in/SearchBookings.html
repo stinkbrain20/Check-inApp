@@ -22,20 +22,17 @@
     <div class="navbar-fixed">
         <nav class=" red accent-4">
             <div class="nav-wrapper">
-                <a href="Check-in.html" class="brand-logo center">AIRPINAS</a>
+                <a href="Check-in.html" class="brand-logo center">
+                    <img src="images/logo.png">
+                </a>
                 <a href="#" data-target="slideout-nav" class="right sidenav-trigger show-on-large">
-                    <i class="large material-icons">account_circle</i>
-                    <!-- <ul class="left hide-on-med-and-down">
-                        <li><a href="#">Search Flight</a></li>
-                        <li><a href="#">Check-in</a></li>
-                        <li><a href="#">Passes</a></li>
-                        <li><a href="#">My Bookings</a></li>
-                    </ul> -->
-
+                    <i  id="iconbtnSize" class="material-icons">account_circle</i></a>
+                <a href="#" onclick="goBack()" class="left">
+                    <i id="iconbtnSize" class="material-icons">navigate_before</i></a>
             </div>
         </nav>
     </div>
-
+    
     <!--Side Menu-->
     <ul class="sidenav blue-grey lighten-4" id="slideout-nav">
         <li><a href="#">Search Flight</a></li>
@@ -55,7 +52,7 @@
                 <br>
                 <div class="row">
                     <div class="input-field col s4 offset-s1">
-                        <input  value="Juan" id="first_name" type="text" class="bold center upperCase">
+                        <input value="Juan" id="first_name" type="text" class="bold center upperCase">
                         <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s4 offset-s2">
@@ -87,25 +84,16 @@
                         <a class="underLine" href="#">View my bookings</a>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
 
-        <!-- <div class="row center">
-                <div class="col s12">
-                    <a id="textFont" href="Passes.html"
-                        class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold "> <i
-                            id="iconbtnSize" class="large material-icons left">playlist_add_check</i>
-                        CHECK-IN</a>
-                </div>
-            </div> -->
-
         <div class="row center">
-                <div class="col s12">
-                    <a id="textFont" href="Passenger.html"
-                        class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
-                        <i id="iconbtnSize" class="material-icons left">search</i>SEARCH</a>
-                </div>
+            <div class="col s12">
+                <a id="textFont" href="Passenger.html"
+                    class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
+                    <i id="iconbtnSize" class="material-icons left">search</i>SEARCH</a>
             </div>
+        </div>
     </div>
 
     <!--Scripts-->
@@ -124,6 +112,13 @@
     <script>
         var elems = document.querySelectorAll('select');
         M.Dropdown.init(elems, {});
+    </script>
+
+    <!-- Back button -->
+    <script>
+        function goBack() {
+            window.history.back();
+        }
     </script>
 
 </body>

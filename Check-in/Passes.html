@@ -22,20 +22,15 @@
     <!--NavBar-->
     <div class="navbar-fixed">
         <nav class=" red accent-4">
-            <div class="row"  id="navLogo">
-                <a href="Check-in.html" class="center" ></a>
+            <div class="nav-wrapper">
+                <a href="Check-in.html" class="brand-logo center">
+                    <img src="images/logo.png">
+                </a>
                 <a href="#" data-target="slideout-nav" class="right sidenav-trigger show-on-large">
-                    <i id="iconbtnSize" class="material-icons">account_circle</i></a>
+                    <i  id="iconbtnSize" class="material-icons">account_circle</i></a>
                 <a href="#" onclick="goBack()" class="left">
-                    <i id="iconbtnSize" class="material-icons">navigate_before</i>
-                    <!-- <ul class="left hide-on-med-and-down">
-                            <li><a href="#">Search Flight</a></li>
-                            <li><a href="#">Check-in</a></li>
-                            <li><a href="#">Passes</a></li>
-                            <li><a href="#">My Bookings</a></li>
-                        </ul> -->
+                    <i id="iconbtnSize" class="material-icons">navigate_before</i></a>
             </div>
-
         </nav>
     </div>
 
@@ -344,7 +339,7 @@
         });
     </script>
 
-<!-- Back button -->
+    <!-- Back button -->
     <script>
         function goBack() {
             window.history.back();

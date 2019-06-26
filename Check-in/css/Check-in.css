@@ -1,20 +1,18 @@
-.philbg{
-  background-image: url("/Check-in/images/phil.jpg"); /* The image used */
+.cardbg{
+  background-image: url("/Check-in/images/phil.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  height: 400px;
+  background-attachment: scroll; 
+  background-repeat: no-repeat; 
+  background-size: cover;
+  /* height: 400px; */
 }
 
 .footerCards{
-    padding: 10px;
-    height: 170px;
-    width: 170px;
-    position: relative;
-    max-width: 220px;
-    max-height: 220px;
-}
+    height: 100px;
+    width: 200px;
+    /* bottom: -12px; */
+    /* overflow: hidden; */
+} 
 
 .bold{
   font-weight: bold;
@@ -37,19 +35,13 @@
   text-decoration-line: underline;
 }
 
-#navLogo{
-  background-image: url("/Check-in/images/logo.png");
-  background-repeat: no-repeat; 
-  background-attachment: fixed;
-  background-size: 300px 30px; 
-  background-position: top;
-  background-position-y: 20px;
-}
-
 #textFont{
   font-size: 20pt;
 }
 
+#textFont2{
+  font-size: 15pt;
+}
 .upperCase{
   text-transform: uppercase;
 }
@@ -61,3 +53,34 @@
 #iconbtnSize{
   font-size: 35pt;
 } 
+
+.navbar-fixed .nav-wrapper .brand-logo img{
+  height:  30px;
+  width: 300px;
+}
+
+.bottomNav{
+  /* overflow: hidden;  */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.rotate-90 {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#marginNav{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* textarea:focus {
+  border-bottom: none!important;
+  box-shadow: none!important;
+} */
