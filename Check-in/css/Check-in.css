@@ -47,6 +47,7 @@
 }
 
 #placeholder{
+  background-color: #ffc400;
   padding: 30px;
 }
 
@@ -61,7 +62,7 @@
 
 .bottomNav{
   /* overflow: hidden;  */
-  position: fixed;
+  position: relative; /*fixed*/
   left: 0;
   bottom: 0;
   width: 100%;
@@ -80,7 +81,47 @@
   padding-bottom: 0;
 }
 
-/* textarea:focus {
-  border-bottom: none!important;
-  box-shadow: none!important;
-} */
+/* Line color for active text box  but not focused*/
+input[type=text]:not(.browser-default){
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid#ffc400 !important;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transition: border .3s, -webkit-box-shadow .3s;
+  transition: border .3s, -webkit-box-shadow .3s;
+  transition: box-shadow .3s, border .3s;
+  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+}
+
+/* Line color for disabled text box */
+input[type=text]:not(.browser-default):disabled{
+  color: rgba(0, 0, 0, 0.42);
+  border-bottom: 1px solid #ffc400 !important;
+}
+
+/* Label color when text box is clicked */
+input[type=text]:not(.browser-default):focus:not([readonly]) + label{
+  color: #ffc400;
+}
+
+/* Line color when text box is clicked */
+input[type=text]:not(.browser-default):focus:not([readonly]){
+  border-bottom: 1px solid red;
+  -webkit-box-shadow: 0 1px 0 0 red;
+          box-shadow: 0 1px 0 0 red;
+}
+
+/* Label color for disabled text box */
+input[type=text]:not(.browser-default):disabled + label{
+  color: red !important;
+}
