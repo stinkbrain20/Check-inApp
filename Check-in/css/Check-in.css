@@ -8,11 +8,17 @@
 }
 
 .footerCards{
-    height: 100px;
+    height: 80px;
     width: 200px;
+    border-radius: 10px;
     /* bottom: -12px; */
     /* overflow: hidden; */
 } 
+
+#marginNav{
+  padding-top: 10px;
+  padding-bottom: 0;
+}
 
 .bold{
   font-weight: bold;
@@ -35,29 +41,37 @@
   text-decoration-line: underline;
 }
 
+/* Check if ginamit */
 #textFont{
   font-size: 20pt;
 }
 
 #textFont2{
-  font-size: 15pt;
+  /* font-size: 15pt; */
 }
 .upperCase{
   text-transform: uppercase;
 }
 
 #placeholder{
-  background-color: #ffc400;
+  border-radius: 10px;
   padding: 30px;
 }
 
 #iconbtnSize{
-  font-size: 35pt;
+  font-size: 30px;
 } 
 
 .navbar-fixed .nav-wrapper .brand-logo img{
   height:  30px;
   width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-fixed .nav-wrapper .brand-logo img{
+    height:  20px;
+    width: 200px;
+  }
 }
 
 .bottomNav{
@@ -76,52 +90,79 @@
   transform: rotate(90deg);
 }
 
-#marginNav{
-  padding-top: 0;
-  padding-bottom: 0;
+#borderRad{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#CardborderRad{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 /* Line color for active text box  but not focused*/
 input[type=text]:not(.browser-default){
-  background-color: transparent;
-  border: none;
   border-bottom: 1px solid#ffc400 !important;
-  border-radius: 0;
-  outline: none;
-  height: 3rem;
-  width: 100%;
-  font-size: 16px;
-  margin: 0 0 8px 0;
-  padding: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  -webkit-transition: border .3s, -webkit-box-shadow .3s;
-  transition: border .3s, -webkit-box-shadow .3s;
-  transition: box-shadow .3s, border .3s;
-  transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
 }
 
 /* Line color for disabled text box */
 input[type=text]:not(.browser-default):disabled{
-  color: rgba(0, 0, 0, 0.42);
+  /* color: rgba(0, 0, 0, 0.42); */
   border-bottom: 1px solid #ffc400 !important;
 }
 
 /* Label color when text box is clicked */
 input[type=text]:not(.browser-default):focus:not([readonly]) + label{
-  color: #ffc400;
+  color: #D50000;
+}
+input[type=text] .browser-default:focus:not([readonly]) + label{
+  color: #D50000;
 }
 
 /* Line color when text box is clicked */
 input[type=text]:not(.browser-default):focus:not([readonly]){
-  border-bottom: 1px solid red;
-  -webkit-box-shadow: 0 1px 0 0 red;
-          box-shadow: 0 1px 0 0 red;
+  border-bottom: 1px solid #D50000;
+  -webkit-box-shadow: 0 1px 0 0 #D50000;
+          box-shadow: 0 1px 0 0 #D50000;
 }
 
 /* Label color for disabled text box */
 input[type=text]:not(.browser-default):disabled + label{
-  color: red !important;
+  color: #D50000 !important;
+}
+
+
+/* button */
+.btn, .btn-large, .btn-small,
+.btn-floating,
+.btn-large,
+.btn-small,
+.btn-flat {
+  font-size: 20px;
+  outline: 0;
+  font-weight: bolder;
+  word-wrap: normal;
+  width: max-content;
+  border-radius: 10px;
+}
+
+.collapsible .collapsible-header {
+  border: none;
+  margin: 0.5rem 0 1rem 0;
+  /* color: black; */
+  background-color: transparent;
+}
+
+#transp{
+  border: none;
+}
+
+.collapsible .collapsible-body #transp{
+  display: none;
+  border: none;
+  -webkit-box-sizing: none;
+          box-sizing: none;
+  padding: 2rem;
 }

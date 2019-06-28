@@ -28,17 +28,29 @@
                         <img src="images/logo.png">
                     </a>
                     <a href="#" data-target="slideout-nav" class="right sidenav-trigger show-on-large">
-                        <i id="iconbtnSize" class="material-icons">account_circle</i></a>
+                        <i id="iconbtnSize" class="material-icons col s1">account_circle</i></a>
                 </div>
             </nav>
         </div>
 
         <!--Side Menu-->
         <ul class="sidenav blue-grey lighten-4" id="slideout-nav">
-            <li><a href="#">Search Flight</a></li>
-            <li><a href="SearchBookings.html">Check-in</a></li>
-            <li><a href="#">Passes</a></li>
-            <li><a href="#">My Bookings</a></li>
+            <div class="section"></div>
+            <div class="section"></div>
+            <div class="section"></div>
+            <li><a href="#">My Account<i class="material-icons">account_circle</i> </a></li>
+            <li><a href="Check-in.html">Home<i class="material-icons">home</i></a></li>
+            <li><a href="#">Search Flight<i class="material-icons">search</i></a></li>
+            <li><a href="SearchBookings.html">Check-in<i class="material-icons">playlist_add_check</i></a></li>
+            <li><a href="#">Flight Status<i class="material-icons">flight_takeoff</i></a></li>
+            <li><a href="Passes.html">Passes<i class="material-icons">local_activity</i></a></li>
+            <li><a href="#">Manage my bookings<i class="material-icons">bookmark</i></a></li>
+            <li><a href="#">Hotel deals<i class="material-icons">hotel </i></a></li>
+            <li><a href="#">Contact us<i class="material-icons">call</i></a></li>
+            <li><a href="FAQ.html">FAQs<i class="material-icons">announcement</i></a></li>
+            <div class="section"></div>
+            <div class="section"></div>
+            <li><a href="Login.html">Logout<i class="material-icons">directions_run</i></a></li>
         </ul>
 
     </header>
@@ -47,8 +59,8 @@
         <!--Current Bookings-->
         <div class="row">
             <div class="col s12">
-                <div class="card">
-                    <div class="card-content cardbg">
+                <div class="card" id="borderRad">
+                    <div class="card-content cardbg" id="CardborderRad">
                         <div class="card-title white-text">
                             <div class="row center-align">
                                 <h5>Your upcoming flight</h5>
@@ -62,6 +74,18 @@
                                 </div>
                                 <div class="col s4">
                                     <h4>PPS</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    <ul id="transp" class="collapsible">
+                                        <li>
+                                            <div class="collapsible-header right">
+                                                <i id="iconbtnSize" class="material-icons white-text">keyboard_arrow_down</i>
+                                            </div>
+                                            <div id="transp" class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -105,25 +129,24 @@
         <!--ADS-->
         <div class="row">
             <div class="col s12">
-
                 <div class="slider">
-                    <ul class="slides">
+                    <ul class="slides" id="borderRad">
                         <li>
-                            <img src="images/image1.jpg"> <!-- random image -->
+                            <img src="images/image1.jpg" id="borderRad"> <!-- random image -->
                             <div class="caption center-align">
                                 <h3 class="amber-text text-accent-3">Advertisement</h3>
                                 <h5 class="red-text text-accent-4">Lorem ipsum dolor sit amet consectetur.</h5>
                             </div>
                         </li>
                         <li>
-                            <img src="images/image2.jpg"> <!-- random image -->
+                            <img src="images/image2.jpg" id="borderRad"> <!-- random image -->
                             <div class="caption left-align">
                                 <h3 class="amber-text text-accent-3">Advertisement</h3>
                                 <h5 class="red-text text-accent-4">Lorem ipsum dolor sit amet consectetur.</h5>
                             </div>
                         </li>
                         <li>
-                            <img src="images/phil.jpg"> <!-- random image -->
+                            <img src="images/phil.jpg" id="borderRad"> <!-- random image -->
                             <div class="caption right-align">
                                 <h3 class="amber-text text-accent-3">Advertisement</h3>
                                 <h5 class="red-text text-accent-4">Lorem ipsum dolor sit amet consectetur.</h5>
@@ -131,7 +154,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
 
@@ -148,7 +170,7 @@
                     <div onclick="location.href='SearchBookings.html';"
                         class="card-panel red-text text-accent-4 waves-effect waves-light center amber accent-3 footerCards"
                         id="marginNav">
-                        <i class="medium material-icons">search</i>
+                        <i id="iconbtnSize" class="material-icons">search</i>
                         <div class="card-title red-text  text-accent-4">
                             <span class="bold" id="textFont2">SEARCH FLIGHT</span>
                         </div>
@@ -159,7 +181,7 @@
                     <div onclick="location.href='SearchBookings.html';"
                         class="card-panel red-text text-accent-4 waves-effect waves-light center amber accent-3 footerCards"
                         id="marginNav">
-                        <i class="medium material-icons ">playlist_add_check</i>
+                        <i id="iconbtnSize" class="material-icons ">playlist_add_check</i>
                         <div class="card-title red-text  text-accent-4">
                             <span class="bold" id="textFont2">CHECK-IN</span>
                         </div>
@@ -170,7 +192,7 @@
                     <div onclick="location.href='Passes.html';"
                         class="card-panel red-text text-accent-4 waves-effect waves-light center amber accent-3 footerCards"
                         id="marginNav">
-                        <i class="medium material-icons">local_activity</i>
+                        <i id="iconbtnSize" class="material-icons">local_activity</i>
                         <div class="card-title red-text  text-accent-4">
                             <span class="bold" id="textFont2">PASSES</span>
                         </div>
@@ -181,7 +203,7 @@
                     <div onclick="location.href='SearchBookings.html';"
                         class="card-panel red-text text-accent-4 waves-effect waves-light center amber accent-3 footerCards"
                         id="marginNav">
-                        <i class="medium material-icons ">bookmark</i>
+                        <i id="iconbtnSize" class="material-icons ">bookmark</i>
                         <div class="card-title red-text  text-accent-4">
                             <span class="bold" id="textFont2">MY BOOKINGS</span>
                         </div>
@@ -203,6 +225,13 @@
             inDuration: 350,
             outDuration: 350,
             edge: 'right'
+        });
+    </script>
+
+    <script>
+        var elems = document.querySelectorAll('.collapsible');
+        M.Collapsible.init(elems, {
+            accordion: false
         });
     </script>
 
