@@ -64,23 +64,23 @@
                 <h4>Passenger 1:</h4>
                 <br>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3">
+                    <div class="input-field col s12 m12 l12">
                         <input disabled value="Juan Dela Cruz" id="disabled text" type="text"
-                            class="bold blue-text text-darken-2 center">
+                            class="bold blue-text text-darken-2 center-align">
                         <label for="disabled">Name</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3">
+                    <div class="input-field col s12 m12 l12">
                         <input disabled value="23F" id="disabled" type="text"
-                            class="bold blue-text text-darken-2 center">
+                            class="bold blue-text text-darken-2 center-align">
                         <label for="disabled">Seat Number</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3">
+                    <div class="input-field col s12 m12 l12">
                         <input disabled value="20 Kg" id="disabled" type="text"
-                            class="bold blue-text text-darken-2 center">
+                            class="bold blue-text text-darken-2 center-align">
                         <label for="disabled">Baggage Allowance</label>
                     </div>
                 </div>
@@ -90,23 +90,23 @@
                 <h4>Passenger 2:</h4>
                 <br>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3">
+                    <div class="input-field col s12 m12 l12">
                         <input disabled value="Juana Dela Cruz" id="disabled" type="text"
-                            class="bold blue-text text-darken-2 center">
+                            class="bold blue-text text-darken-2 center-align">
                         <label for="disabled">Name</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3">
+                    <div class="input-field col s12 m12 l12">
                         <input disabled value="23E" id="disabled" type="text"
-                            class="bold blue-text text-darken-2 center">
+                            class="bold blue-text text-darken-2 center-align">
                         <label for="disabled">Seat Number</label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s6 offset-s3">
+                    <div class="input-field col s12 m12 l12">
                         <input disabled value="7 Kg" id="disabled" type="text"
-                            class="bold blue-text text-darken-2 center">
+                            class="bold blue-text text-darken-2 center-align">
                         <label for="disabled">Baggage Allowance</label>
                     </div>
                 </div>
@@ -116,9 +116,25 @@
 
     <div class="row center">
         <div class="col s12">
-            <a href="Passes.html" class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 "> <i
-                    id="iconbtnSize" class="material-icons left">playlist_add_check</i>
+            <a onclick="myFunction()" class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 ">
+                <i id="iconbtnSize" class="material-icons left">playlist_add_check</i>
                 CHECK-IN</a>
+        </div>
+    </div>
+
+    <div id="loading" class="section center">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -133,13 +149,33 @@
             outDuration: 350,
             edge: 'right'
         });
-    </script>   
+    </script>
 
     <!-- Back button -->
     <script>
         function goBack() {
             window.history.back();
         }
+    </script>
+
+    <script>
+        var myVar;
+
+        function myFunction() {
+            document.getElementById("loading").style.display = "block";
+            myVar = setTimeout(showPage, 3000);
+        }
+
+        function showPage() {
+            location.href = "Passes.html";
+        }
+    </script>
+
+    <!-- Hide loading function on window load -->
+    <script>
+        window.onload = function () {
+            document.getElementById("loading").style.display = "none";
+        };
     </script>
 
 </body>
