@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Home</title>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/Check-in.css" />
+
+</head>
+
+<body class="grey lighten-2">
+
+    <header>
+        <!--NavBar-->
+        <div class="navbar-fixed">
+            <nav class=" red accent-4">
+                <div class="nav-wrapper">
+                    <a href="LoginTest.html" class="brand-logo center">
+                        <img src="images/logo.png">
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <main>
+
+        <div class="section"></div>
+        <div class="section"></div>
+
+        <div class="section center">
+            <div class="container z-depth-3 white" id="placeholder">
+                <div class="row">
+                    <div class="s12">
+                        <h6><i class="material-icons">person_outline</i> Username</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="textboxb">
+                        <div class="input-field col s6 offset-s3">
+                            <input value="kyamson" id="uname" type="text" class="bold center-align">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="s12">
+                        <h6><i class="material-icons">https</i> Password</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="textboxb">
+                        <div class="input-field col s6 offset-s3">
+                            <input value="pogiako" id="passwd" type="password" class="bold center-align">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s4 left">
+                        <a class="underLine modal-trigger" href="#Modal_Popup" onclick="">Forgot Password</a>
+                    </div>
+                    <div class="col s4 right">
+                        <a class="underLine modal-trigger" href="#Modal_Popup" onclick="">Register</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="section center">
+            <div class="row center">
+                <div class="col s12">
+                    <a id="textFont" href="#Modal_Popup" onclick="LoginModal()"
+                        class="modal-trigger waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
+                        LOGIN</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal-->
+        <div id="Modal_Popup" class="modal">
+            <div class="modal-content">
+                <h5 id="imgTitle">Please wait...</h5>
+
+                <!-- Hidden at first -->
+                <div id="imgBoxHide">
+                    <div class="row center">
+                        <div class="container">
+                            <img id="imgBox">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Modal_Preloader" class="container center">
+                    <div class="preloader-wrapper big active">
+                        <div class="spinner-layer spinner-blue">
+                            <div class="circle-clipper left">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="gap-patch">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="circle-clipper right">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Modal_Footer" class="modal-footer">
+                    <a id="modalBtn" href="#"
+                        class="modal-close waves-effect waves-light btn amber accent-3 red-text text-accent-4">CLOSE</a>
+                </div>
+            </div>
+
+    </main>
+
+
+    <!--Scripts-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+
+        function LoginModal() {
+            document.getElementById("Modal_Footer").style.display = "none";
+            document.getElementById("Modal_Preloader").style.display = "block";
+
+            setTimeout(function () {
+
+                if (document.getElementById("uname").value == 'kyamson' && document.getElementById("passwd").value == 'pogiako') {
+                    document.getElementById("imgTitle").innerText = "Login success!";
+                    document.getElementById('imgBox').src = "images/check.png";
+                    document.getElementById("Modal_Preloader").style.display = "none";
+                    document.getElementById("ImgBoxHide").style.display = "block";
+                    // setTimeout(function () {
+                        location.href = "Check-in.html";
+                    // }, 1000);
+                }
+                else {
+                    document.getElementById("imgTitle").innerText = "Login failed!";
+                    document.getElementById('imgBox').src = "images/cancel.png";
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("ImgBoxHide").style.display = "block";
+                    setTimeout(function () {
+                        location.href = "LoginTest.html";
+                    }, 1000);
+                }
+
+            }, 2000);
+        }
+
+        // function myFunction() {
+        //     document.getElementById("ModalFooter").style.display = "none"; //Hide ModalBtn
+        //     document.getElementById("loading").style.display = "block"; //Display loading circle
+        //     var myVar = setTimeout(showPage, 2000);
+        // }
+
+        // function showPage() {
+        //     document.getElementById("Hiddenkho").style.display = "block"; //Hide ImgBox
+        //     document.getElementById("loading").style.display = "none"; //Hide loading circle after it was loaded.
+
+        //     if (document.getElementById("uname").value == 'kyamson' && document.getElementById("passwd").value == 'pogiako') {
+        //         document.getElementById("imgTitle").innerText = "Login Success!"
+        //         document.getElementById('imgBox').src = "images/check.png";
+        //         setTimeout(function () {
+        //             window.location.href = "Check-in.html";
+        //         }, 1000);
+        //     }
+        //     else {
+        //         document.getElementById("imgTitle").innerText = "Login Failed!"
+        //         document.getElementById('imgBox').src = "images/cancel.png";
+        //         setTimeout(function () {
+        //             window.location.href = "Login.html";
+        //         }, 1000);
+        //     }
+        // }
+
+        // function inProgress() {
+        //     document.getElementById("Hiddenkho").style.display = "none"; //Hide imgBox
+        //     document.getElementById("imgTitle").innerText = "Loading..."
+        //     document.getElementById("loading").style.display = "block"; //Display loading
+
+        //     setTimeout(function () {
+        //         document.getElementById("imgTitle").innerText = "Sorry, we are still working on this feature."
+        //         document.getElementById('imgBox').src = "images/gears.png";
+        //         document.getElementById("Hidden").style.display = "block";
+        //         document.getElementById("loading").style.display = "none";
+        //         document.getElementById("ModalFooter").style.display = "block";
+
+        //     }, 2000);
+        // }
+
+    </script>
+
+    <!-- Hide loading function on window load -->
+    <script>
+        // window.onload = function () {
+        //     document.getElementById("loading").style.display = "none";
+        // };
+        // window.onload = function () {
+        //     document.getElementById("Hiddenkho").style.display = "none";
+        // };
+        // window.onload = function () {
+        //     document.getElementById("ModalFooter").style.display = "none";
+        // };
+    </script>
+
+    <!-- Check if "Enter" is pressed  not yet working-->
+    <script>
+        var input = document.getElementById("passwd");
+        input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("LoginBtn").click();
+            }
+        });
+    </script>
+
+    <!-- Modal -->
+    <script>
+        var elems = document.querySelectorAll('.modal');
+        M.Modal.init(elems, {
+            preventScrolling: true,
+            // dismissible: false
+        });
+    </script>
+
+</body>
+
+
+</html>

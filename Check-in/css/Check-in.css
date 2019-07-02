@@ -1,18 +1,15 @@
 .cardbg{
-  background-image: url("/Check-in/images/phil.jpg");
-  background-color: #cccccc; /* Used if the image is unavailable */
+  background-image: url("/Check-in/images/bg3.jpg");
+  background-color: #cccccc; 
   background-attachment: scroll; 
   background-repeat: no-repeat; 
   background-size: cover;
-  /* height: 400px; */
 }
 
 .footerCards{
     height: 80px;
     width: 200px;
     border-radius: 10px;
-    /* bottom: -12px; */
-    /* overflow: hidden; */
 } 
 
 #marginNav{
@@ -25,8 +22,6 @@
 }
 
 .QRsize{
-  /* margin-left: 320px; */
-  /* margin-top: -100px; */
   width: 150px;
   height: 150px;
 }
@@ -41,14 +36,10 @@
   text-decoration-line: underline;
 }
 
-/* Check if ginamit */
 #textFont{
   font-size: 20pt;
 }
 
-#textFont2{
-  /* font-size: 15pt; */
-}
 .upperCase{
   text-transform: uppercase;
 }
@@ -75,8 +66,7 @@
 }
 
 .bottomNav{
-  /* overflow: hidden;  */
-  position: relative; /*fixed*/
+  position: relative; 
   left: 0;
   bottom: 0;
   width: 100%;
@@ -109,7 +99,6 @@ input[type=text]:not(.browser-default){
 
 /* Line color for disabled text box */
 input[type=text]:not(.browser-default):disabled{
-  /* color: rgba(0, 0, 0, 0.42); */
   border-bottom: 1px solid #ffc400 !important;
 }
 
@@ -151,7 +140,6 @@ input[type=text]:not(.browser-default):disabled + label{
 .collapsible .collapsible-header {
   border: none;
   margin: 0.5rem 0 1rem 0;
-  /* color: black; */
   background-color: transparent;
 }
 
@@ -194,4 +182,27 @@ input[type=text]:not(.browser-default):disabled + label{
   border-radius: 2px;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
+}
+
+#imgBox{
+height: 50%;
+width:  50%;
+border: none;
+object-fit: contain;
+}
+
+.modal{
+  border-radius: 10px;
+}
+
+.modal .modal-footer {
+  border-radius: 10px;
+  background-color: transparent;
+  height: 56px;
+  width: 100%;
+  text-align: center;
+}
+
+#modalBtn{
+  width: 100%;
 }

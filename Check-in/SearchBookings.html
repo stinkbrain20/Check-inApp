@@ -82,7 +82,7 @@
                     <div class="input-field col s12 m6 l6">
                         <label>Departure City</label>
                         <br><br>
-                        <select class="browser-default bold upperCase center">
+                        <select id="departure" class="browser-default bold upperCase center">
                             <option value="" disabled selected></option>
                             <option value="1">CEBU (CEB)</option>
                             <option value="2">DAVAO (DVO)</option>
@@ -101,73 +101,120 @@
 
         <div class="row center">
             <div class="col s12">
-                <a onclick="myFunction()"
-                    class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4">
+                <a href="#Popup" onclick="myFunction()"
+                    class="modal-trigger waves-effect waves-light btn-large amber accent-3 red-text text-accent-4">
                     <i id="iconbtnSize" class="material-icons left">search</i>SEARCH</a>
             </div>
         </div>
     </div>
 
-    <div id="loading" class="section center">
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue">
-                <div class="circle-clipper left">
-                    <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
+    <!--Modal-->
+    <div id="Popup" class="modal">
+        <div class="modal-content">
+            <h4 id="imgTitle">Searching...</h4>
+
+            <!-- Hidden at first -->
+            <div id="Hiddenkho"></div>
+            <div class="row center">
+                <div class="container">
+                    <img id="imgBox">
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--Scripts-->
+        <div id="loading" class="section center">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--Scripts-->
 
-    <script>
-        const sideNav = document.querySelector('.sidenav');
-        M.Sidenav.init(sideNav, {
-            inDuration: 350,
-            outDuration: 350,
-            edge: 'right'
-        });
-    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <script>
-        var elems = document.querySelectorAll('select');
-        M.Dropdown.init(elems, {});
-    </script>
+        <script>
+            const sideNav = document.querySelector('.sidenav');
+            M.Sidenav.init(sideNav, {
+                inDuration: 350,
+                outDuration: 350,
+                edge: 'right'
+            });
+        </script>
 
-    <!-- Back button -->
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
+        <script>
+            var elems = document.querySelectorAll('select');
+            M.Dropdown.init(elems, {});
+        </script>
 
-    <script>
-        var myVar;
+        <!-- Back button -->
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
 
-        function myFunction() {
-            document.getElementById("loading").style.display = "block";
-            myVar = setTimeout(showPage, 3000);
-        }
+        <!-- Modal -->
+        <script>
+            var elems = document.querySelectorAll('.modal');
+            M.Modal.init(elems, {
+                preventScrolling: true
+            });
+        </script>
 
-        function showPage() {
-            location.href = "Passenger.html";
-        }
-    </script>
+        <script>
+            var myVar;
 
-    <!-- Hide loading function on window load -->
-    <script>
-        window.onload = function () {
-            document.getElementById("loading").style.display = "none";
-        };
-    </script>
+            function myFunction() {
+                document.getElementById("loading").style.display = "block";
+                myVar = setTimeout(showPage, 2000);
+            }
+
+            function showPage() {
+                var fname = document.getElementById("first_name").value;
+                var lname = document.getElementById("last_name").value;
+                var booknum = document.getElementById("bookingnum").value;
+                var dep = document.getElementById("departure").value;
+
+                if (fname.toUpperCase() == 'JUAN' && lname.toUpperCase() == 'DELA CRUZ' && booknum.toUpperCase() == 'Z060' && dep == '3') {
+                    document.getElementById("imgTitle").innerText = "Search Success!"
+                    document.getElementById('imgBox').src = "images/check.png";
+                    setTimeout(function () {
+                        location.href = "Passenger.html";
+                    }, 1000);
+                }
+                else {
+                    document.getElementById("imgTitle").innerText = "Search Failed!"
+                    document.getElementById('imgBox').src = "images/cancel.png";
+                    setTimeout(function () {
+                        location.href = "SearchBookings.html";
+                    }, 1000);
+                }
+
+            }
+        </script>
+
+        <!-- Hide loading function on window load -->
+        <script>
+            window.onload = function () {
+                document.getElementById("loading").style.display = "none";
+            };
+            window.onload = function () {
+                document.getElementById("Hiddenkho").style.display = "none";
+            };
+            window.onload = function () {
+                document.getElementById("ModalFooter").style.display = "none";
+            };
+        </script>
 
 </body>
 

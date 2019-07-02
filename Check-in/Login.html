@@ -67,53 +67,62 @@
                 </div>
                 <div class="row">
                     <div class="col s4 left">
-                        <a class="underLine" href="#">Forgot Password</a>
+                        <a class="underLine modal-trigger" href="#Popup" onclick="inProgress()">Forgot Password</a>
                     </div>
                     <div class="col s4 right">
-                        <a class="underLine" href="#">Register</a>
+                        <a class="underLine modal-trigger" href="#Popup" onclick="inProgress()">Register</a>
                     </div>
 
                 </div>
             </div>
 
-        </div>
-
-        <div id="loading" class="section">
-            <div class="row">
-                <div class="col s4 offset-s4">
-                    <div class="progress">
-                        <div class="indeterminate"></div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="section center">
             <div class="row center">
                 <div class="col s12">
-                    <a id="textFont" onclick="myFunction()"
-                        class="waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
+                    <a id="textFont" href="#Popup" onclick="myFunction()"
+                        class="modal-trigger waves-effect waves-light btn-large amber accent-3 red-text text-accent-4 bold ">
                         LOGIN</a>
                 </div>
             </div>
         </div>
 
-        <!-- <div id="loading" class="section center">
-            <div class="preloader-wrapper big active">
-                <div class="spinner-layer spinner-blue">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="gap-patch">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
+        <!--Modal-->
+        <div id="Popup" class="modal">
+            <div class="modal-content">
+                <h4 id="imgTitle">Loggin in...</h4>
+
+                <!-- Hidden at first -->
+                <div id="Hiddenkho"></div>
+                <div class="row center">
+                    <div class="container">
+                        <img id="imgBox">
                     </div>
                 </div>
             </div>
-        </div> -->
 
+            <div id="loading" class="section center">
+                <div class="preloader-wrapper big active">
+                    <div class="spinner-layer spinner-blue">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="ModalFooter" class="modal-footer">
+                <a id="modalBtn" href="#" onclick="HideFun()"
+                    class="modal-close waves-effect waves-light btn amber accent-3 red-text text-accent-4">OK</a>
+            </div>
+        </div>
 
     </main>
 
@@ -123,37 +132,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <script>
-        var myVar;
 
         function myFunction() {
-            document.getElementById("loading").style.display = "block";
-            myVar = setTimeout(showPage, 2000);
+            document.getElementById("ModalFooter").style.display = "none"; //Hide ModalBtn
+            document.getElementById("loading").style.display = "block"; //Display loading circle
+            var myVar = setTimeout(showPage, 2000);
         }
 
         function showPage() {
+            document.getElementById("Hiddenkho").style.display = "block"; //Hide ImgBox
+            document.getElementById("loading").style.display = "none"; //Hide loading circle after it was loaded.
 
             if (document.getElementById("uname").value == 'kyamson' && document.getElementById("passwd").value == 'pogiako') {
-                M.toast({
-                    html: 'Logged in successfully!',
-                    displayLength: '2000',
-                    classes: 'rounded',
-                    completeCallback: function () {
-                        location.href = "Check-in.html";
-                    }
-                });
+                document.getElementById("imgTitle").innerText = "Login Success!"
+                document.getElementById('imgBox').src = "images/check.png";
+                setTimeout(function () {
+                    window.location.href = "Check-in.html";
+                }, 1000);
             }
             else {
-                M.toast({
-                    html: 'Logged in failed! Please check your username and password.',
-                    displayLength: '2000',
-                    classes: 'rounded',
-                    completeCallback: function () {
-                        location.href = "Login.html";
-                    }
-                });
+                document.getElementById("imgTitle").innerText = "Login Failed!"
+                document.getElementById('imgBox').src = "images/cancel.png";
+                setTimeout(function () {
+                    window.location.href = "Login.html";
+                }, 1000);
             }
-
         }
+
+        function inProgress() {
+            document.getElementById("Hiddenkho").style.display = "none"; //Hide imgBox
+            document.getElementById("imgTitle").innerText = "Loading..."
+            document.getElementById("loading").style.display = "block"; //Display loading
+
+            setTimeout(function () {
+                document.getElementById("imgTitle").innerText = "Sorry, we are still working on this feature."
+                document.getElementById('imgBox').src = "images/gears.png";
+                document.getElementById("Hidden").style.display = "block";
+                document.getElementById("loading").style.display = "none";
+                document.getElementById("ModalFooter").style.display = "block";
+
+            }, 2000);
+        }
+
     </script>
 
     <!-- Hide loading function on window load -->
@@ -161,16 +181,30 @@
         window.onload = function () {
             document.getElementById("loading").style.display = "none";
         };
+        window.onload = function () {
+            document.getElementById("Hiddenkho").style.display = "none";
+        };
+        window.onload = function () {
+            document.getElementById("ModalFooter").style.display = "none";
+        };
     </script>
 
-    <!-- Check if "Enter" is pressed -->
+    <!-- Check if "Enter" is pressed  not yet working-->
     <script>
         var input = document.getElementById("passwd");
         input.addEventListener("keyup", function (event) {
             if (event.keyCode === 13) {
                 event.preventDefault();
-                myFunction();
+                document.getElementById("LoginBtn").click();
             }
+        });
+    </script>
+
+    <!-- Modal -->
+    <script>
+        var elems = document.querySelectorAll('.modal');
+        M.Modal.init(elems, {
+            preventScrolling: true
         });
     </script>
 
