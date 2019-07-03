@@ -37,23 +37,24 @@
 
         <!--Side Menu-->
         <ul class="sidenav blue-grey lighten-4" id="slideout-nav">
-            <div class="section"></div>
-            <div class="section"></div>
-            <div class="section"></div>
-            <li><a href="#">My Account<i class="material-icons">account_circle</i> </a></li>
-            <li><a href="Check-in.html">Home<i class="material-icons">home</i></a></li>
-            <li><a href="#">Search Flight<i class="material-icons">search</i></a></li>
-            <li><a href="SearchBookings.html">Check-in<i class="material-icons">playlist_add_check</i></a></li>
-            <li><a href="#">Flight Status<i class="material-icons">flight_takeoff</i></a></li>
-            <li><a href="Passes.html">Passes<i class="material-icons">local_activity</i></a></li>
-            <li><a href="#">Manage my bookings<i class="material-icons">bookmark</i></a></li>
-            <li><a href="#">Hotel deals<i class="material-icons">hotel </i></a></li>
-            <li><a href="#">Contact us<i class="material-icons">call</i></a></li>
-            <li><a href="FAQ.html">FAQs<i class="material-icons">announcement</i></a></li>
-            <div class="section"></div>
-            <div class="section"></div>
-            <li><a href="Login.html">Logout<i class="material-icons">directions_run</i></a></li>
-        </ul>
+                <div class="section"></div>
+                <div class="section"></div>
+                <div class="section"></div>
+                <li><a href="#" class="tooltipped" data-position="left" data-tooltip="Feature not available.">My Account<i
+                            class="material-icons">account_circle</i> </a></li>
+                <li><a href="Check-in.html">Home<i class="material-icons">home</i></a></li>
+                <li><a href="#" class="tooltipped" data-position="left" data-tooltip="Feature not available.">Search Flight<i class="material-icons">search</i></a></li>
+                <li><a href="SearchBookings.html">Check-in<i class="material-icons">playlist_add_check</i></a></li>
+                <li><a href="#" class="tooltipped" data-position="left" data-tooltip="Feature not available.">Flight Status<i class="material-icons">flight_takeoff</i></a></li>
+                <li><a href="Passes.html">Passes<i class="material-icons">local_activity</i></a></li>
+                <li><a href="#" class="tooltipped" data-position="left" data-tooltip="Feature not available.">Manage my bookings<i class="material-icons">bookmark</i></a></li>
+                <li><a href="#" class="tooltipped" data-position="left" data-tooltip="Feature not available.">Hotel deals<i class="material-icons">hotel </i></a></li>
+                <li><a href="#" class="tooltipped" data-position="left" data-tooltip="Feature not available.">Contact us<i class="material-icons">call</i></a></li>
+                <li><a href="FAQ.html">FAQs<i class="material-icons">announcement</i></a></li>
+                <div class="section"></div>
+                <div class="section"></div>
+                <li><a href="Login.html">Logout<i class="material-icons">exit_to_app</i></a></li>
+            </ul>
 
     </header>
 
@@ -197,25 +198,31 @@
 
     <!-- Back button -->
     <script>
+
+        // Back icon function
         function goBack() {
             window.history.back();
         }
-    </script>
 
-    <script>
+        // SideNav initialization
         const sideNav = document.querySelector('.sidenav');
         M.Sidenav.init(sideNav, {
             inDuration: 350,
             outDuration: 350,
             edge: 'right'
         });
-    </script>
 
-    <script>
+        // Collapsible initialization
         var elems = document.querySelectorAll('.collapsible');
         M.Collapsible.init(elems, {
             accordion: false
         });
+
+        // Tooltip initialization
+        var elems = document.querySelectorAll('.tooltipped');
+        var instances = M.Tooltip.init(elems, {
+        });
+
     </script>
 
 </body>

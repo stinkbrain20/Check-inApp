@@ -100,6 +100,7 @@ input[type=text]:not(.browser-default){
 /* Line color for disabled text box */
 input[type=text]:not(.browser-default):disabled{
   border-bottom: 1px solid #ffc400 !important;
+  font-size: 1.2rem;
 }
 
 /* Label color when text box is clicked */
@@ -120,6 +121,7 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 /* Label color for disabled text box */
 input[type=text]:not(.browser-default):disabled + label{
   color: #D50000 !important;
+  font-size: 1rem;
 }
 
 
@@ -137,25 +139,6 @@ input[type=text]:not(.browser-default):disabled + label{
   border-radius: 10px;
 }
 
-.collapsible .collapsible-header {
-  border: none;
-  margin: 0.5rem 0 1rem 0;
-  background-color: transparent;
-}
-
-#transp{
-  border: none;
-}
-
-.collapsible .collapsible-body #transp{
-  display: none;
-  border: none;
-  -webkit-box-sizing: none;
-          box-sizing: none;
-  padding: 2rem;
-}
-
-
 /* Login textbox color  when clicked*/
 .textboxb input[type=text]:not(.browser-default):focus:not([readonly]),
 .textboxb input[type=password]:not(.browser-default):focus:not([readonly]){
@@ -166,22 +149,6 @@ input[type=text]:not(.browser-default):disabled + label{
 .textboxb input[type=text]:not(.browser-default),
 .textboxb input[type=password]:not(.browser-default){
   border: 2px solid #ffc400;
-}
-
-/* progress bar color */
-.progress .indeterminate {
-  background-color: #ffc400;
-}
-
-.progress {
-  position: relative;
-  height: 4px;
-  display: block;
-  width: 100%;
-  background-color: #ffe693;
-  border-radius: 2px;
-  margin: 0.5rem 0 1rem 0;
-  overflow: hidden;
 }
 
 #imgBox{
@@ -205,4 +172,52 @@ object-fit: contain;
 
 #modalBtn{
   width: 100%;
+}
+
+#imgTitle{
+  margin: 0;
+  padding: 20px;
+}
+
+.divider {
+  height: 2px;
+  overflow: hidden;
+  background-color: #D50000;
+}
+
+@media only screen and (max-width: 600px) {
+.sidenav {
+  position: fixed;
+  width: 280px;
+  left: 0;
+  top: 0;
+  margin: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  height: 100%;
+  height: calc(100% + 60px);
+  height: -moz-calc(100%);
+  padding-bottom: 60px;
+  background-color: #fff;
+  z-index: 999;
+  overflow-y: auto;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: translateX(-105%);
+          transform: translateX(-105%);
+  }
+}
+
+/* Line color for disabled text box */
+.wrapper #InviDetails input[type=text]:not(.browser-default):disabled{
+  border-bottom: transparent !important;
+  font-size: 1.2rem;
+}
+
+/* Label color for disabled text box */
+.wrapper #InviDetails input[type=text]:not(.browser-default):disabled + label{
+  color: #1976D2 !important;
+  font-size: 1rem;
+  font-weight: bold;
 }
